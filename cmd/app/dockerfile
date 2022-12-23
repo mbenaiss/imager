@@ -1,0 +1,22 @@
+FROM golang:alpine as builder
+WORKDIR /go/src/app
+RUN  apk add --update --no-cache \
+    --repository http://dl-3.alpinelinux.org/alpine/edge/community \
+    --repository http://dl-3.alpinelinux.org/alpine/edge/main \
+    vips-dev fftw-dev build-base upx --no-cache 
+
+
+COPY . .
+RUN go mod download
+RUN go build  -ldflags="-s -w" -o /go/bin/app cmd/app/main.go
+RUN upx /go/bin/app
+
+FROM alpine
+WORKDIR /app
+RUN  apk add --update --no-cache \
+    --repository http://dl-3.alpinelinux.org/alpine/edge/community \
+    --repository http://dl-3.alpinelinux.org/alpine/edge/main \
+    vips-dev fftw-dev build-base
+COPY --from=builder /go/bin/app /app/app
+
+CMD ["/app/app"]
