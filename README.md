@@ -6,6 +6,9 @@ Imager is a serverless application that allows you to process images on the fly 
 
 To use Imager, you can send a GET request to the API endpoint with the following parameters:
 
+`https://d34bfvhzd89jzk.cloudfront.net/{url}?o=crop&w=100&h=100&q=80&f=webp`
+
+- `url`: the url of the image to process (e.g. https://images.unsplash.com/photo-1537151625747-768eb6cf92b2)
 - `o`: Operation to perform on the image (e.g. crop, resize)
 - `w`: Width of the image (e.g. 100)
 - `h`: Height of the image (e.g. 100)
