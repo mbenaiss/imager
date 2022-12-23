@@ -16,10 +16,10 @@ To use Imager, you can send a GET request to the API endpoint with the following
 
 Here is an example of how you can use Imager to crop an image:
 
-| Original image                                                                           | Result                                                                                                                                                    | Description               |
-| ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| ![AWS Logo](https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png) | ![AWS Logo Cropped](https://d34bfvhzd89jzk.cloudfront.net/https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png?o=crop&w=100&h=100) | Cropped to 100x100 pixels |
-| ![AWS Logo](https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png) | ![AWS Logo Cropped](https://d34bfvhzd89jzk.cloudfront.net/https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png?f=webp)             | Converted to WebP format  |
+| Original image                                                            | Size    | Result                                                                                                                                     | Size   | Description               |
+| ------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------ | ------------------------- |
+| ![unsplash](https://images.unsplash.com/photo-1537151625747-768eb6cf92b2) | 2,28 mo | ![unsplash Cropped](https://d34bfvhzd89jzk.cloudfront.net/https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?o=crop&w=100&h=100) | 6 ko   | Cropped to 100x100 pixels |
+| ![unsplash](https://images.unsplash.com/photo-1537151625747-768eb6cf92b2) | 2,28 Mo | ![unsplash Cropped](https://d34bfvhzd89jzk.cloudfront.net/https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?f=webp)             | 553 ko | Converted to WebP format  |
 
 ## Deploying
 
